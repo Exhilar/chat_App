@@ -1,0 +1,322 @@
+// ########## Default ##########
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+  background: hsl(270, 20%, 96%);
+}
+header, section, main, footer {
+  display: block;
+}
+
+// ########## Mobile View ##########
+.wrapper {
+  position: relative;
+
+  .bg {
+    height: 550px;
+    width: 50%;
+    background: linear-gradient(to top, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    background-size: cover;
+    border-bottom-right-radius: 500px 900px;
+  }
+
+  .app {
+    background: hsl(0, 0%, 100%);
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    width: 250px;
+    padding: 10px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 100px -40px hsl(271, 15%, 43%);;
+
+    .app-inner {
+      background: hsl(270, 20%, 96%);
+      border-radius: 30px;
+      padding-bottom: 1px;
+
+      header {
+        background: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+        padding: 30px 10px 10px;
+        position: relative;
+        border-radius: 20px 20px 8px 8px;
+
+        .top {
+          background: hsl(0, 0%, 100%);
+          position: absolute;
+          top: -14%;
+          left: 25%;
+          width: 50%;
+          height: 27px;
+          border-radius: 15px;
+        }
+
+        .header {
+          display: grid;
+          grid-template-columns: 1fr 2fr 9fr 1fr;
+          align-items: center;
+          
+          i {
+            color: hsl(0, 0%, 100%);
+            justify-self: start;
+          }
+
+            img {
+              background: white;
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              padding: 1px;
+            }
+
+          p {
+            line-height: .8;
+            margin-left: 5px;
+
+            span {
+
+              &:nth-of-type(1) {
+                font-weight: 500;
+                color: hsl(0, 0%, 100%);
+                font-size: .9em;
+              }
+
+              &:nth-of-type(2) {
+                color: hsl(276, 100%, 81%);
+                font-size: .7em;
+              }
+
+            }
+
+          }
+
+        } // End of .header
+
+      } // End of header
+
+      main {
+        margin: 10px;
+
+        .first-left, .second-left, .third-left {
+          width: 60%;
+          background: hsl(264, 12%, 92%);
+          padding: 10px;
+          border-radius: 10px 10px 10px 5px;
+          
+          p {
+            color: hsl(276, 55%, 52%);
+            font-size: .57em;
+          }
+
+        }
+
+        .second-left {
+          margin: 10px 0 20px;
+        }
+
+        .first-right {
+          text-align: right;
+          padding: 0;
+
+          img {
+            width: 40px;
+            border-radius: 10px;
+          }
+
+        }
+
+        .second-right, .third-right {
+          width: 60%;
+          margin: 10px 0 10px auto;
+          background: hsl(0, 0%, 100%);
+          padding: 10px;
+          border-radius: 10px 10px 5px 10px;
+          
+          p {
+            color: hsl(271, 15%, 43%);
+            font-size: .56em;
+          }
+
+        }
+
+        .third-right {
+          margin: 5px 0 20px auto;
+          width: 75px;
+
+          p {
+            text-align: center;
+          }
+
+        }
+
+        .fourth-left, .fifth-left {
+          width: 170px;
+          background: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+          color: hsl(0, 0%, 100%);
+          display: grid;
+          grid-template-columns: 1fr 6fr 1fr;
+          align-items: center;
+          padding: 10px 20px 10px 10px;
+          box-sizing: border-box;
+          border-radius: 10px 10px 10px 5px;
+
+          .circle {
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, .3);
+            border: 1px solid rgba(255, 255, 255, .4);
+            border-radius: 50%;
+          }
+
+          p {
+
+            &:nth-of-type(1) {
+              font-size: .6em;
+              margin-left: 7px;
+              color: rgba(255, 255, 255, .8);
+            }
+
+            &:nth-of-type(2) {
+              font-weight: bold;
+            }
+
+          }
+
+        }
+
+        .fourth-left {
+          margin: 10px 0;
+        }
+
+        .text-area {
+          position: relative;
+          margin-top: 20px;
+
+          input {
+            background: hsl(0, 0%, 100%);
+            color: hsl(206, 6%, 79%);
+            width: 100%;
+            padding: 10px;
+            border: 0;
+            border-radius: 50px;
+            box-sizing: border-box;
+          }
+
+          .submit {
+            background: hsl(271, 36%, 24%);
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            border-radius: 50%;
+
+            i {
+              color: hsl(0, 0%, 100%);
+              margin-top: 4px;
+            }
+
+          }
+
+        }
+
+      } // End of main
+
+    } // End of .app-inner
+
+  } // End of .app
+
+  section {
+    margin: 200px 0 0;
+    text-align: center;
+
+    h1 {
+      color: hsl(271, 36%, 24%);
+      font-size: 2.5em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: hsl(270, 7%, 64%);
+      line-height: 1.7;
+      width: 300px;
+      margin: 0 auto;
+    }
+
+  } // End of section
+
+  footer {
+    font-size: .75em;
+    margin: 100px 0 10px;
+    text-align: center;
+    color: hsl(293, 100%, 63%);
+
+    #fspan {
+      padding-right: 10px;
+      border-right: 2px solid hsl(264, 100%, 61%);
+    }
+
+    #sspan {
+      padding-left: 10px;
+      border-left: 2px solid hsl(293, 100%, 63%);
+    }
+
+    a {
+      color: hsl(264, 100%, 61%);
+      text-decoration: underline;
+      text-decoration-color: hsl(271, 36%, 24%);
+
+      &:hover {
+        text-decoration: none;
+      }
+
+    }
+
+  } // End of footer
+
+} // End of .wrapper
+
+// ########## Desktop View ##########
+@media screen and (min-width: 768px) {
+  .wrapper {
+
+    .bg {
+      background: linear-gradient(to top, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+      height: 725px;
+      width: 30%;
+      border-bottom-left-radius: 1900px 550px;
+      border-bottom-right-radius: 3000px 3900px;
+    }
+
+    .app {
+      top: 10%;
+      left: 25%;
+    }
+
+    section {
+      position: absolute;
+      top: 10%;
+      left: 55%;
+      text-align: left;
+      width: 430px;
+
+      p {
+        width: 100%;
+      }
+
+    }
+
+    footer  {
+      font-size: 1em;
+    }
+
+  } // End of wrapper
+
+} // End of Media Query
